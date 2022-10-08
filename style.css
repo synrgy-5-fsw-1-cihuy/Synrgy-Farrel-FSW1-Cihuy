@@ -57,16 +57,47 @@ header {
 }
 
 @media only screen and (max-width: 600px) {
-  /* header {
-  } */
+  header {
+    align-items: center;
+    right: 0;
+    left: 0;
+    top: 0px;
+    z-index: 999;
+    background-color: hsl(231, 100%, 97%, 0.8);
+  }
+  
+  .topnav-container {
+    top: 20%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row: inherit;
+    margin-left: 5%;
+    margin-right: 0%;
+    position: relative;
+    text-align: center;
+    left: 5%;
+    right: 10%;
+    max-width: fit-content;
+    gap: 0px;
+  }
+  
+  .topnav-square {
+    position: relative;
+    background-color: rgb(22, 73, 227);
+    width: 6%;
+    height: 30%;
+  
+    left: 5%;
+  }
+  
+  .topnav-container a {
+    text-decoration: none;
+    color: #021639;
+  }
 
 
   p{
     font-size: 4vw;
-  }
-
-  .topnav-container {
-    display: none;
   }
 }
 
@@ -441,6 +472,13 @@ a {
   text-align: center;
 }
 
+#getstart h1{
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
 #getstart button {
   position: relative;
   width: 6rem;
@@ -541,7 +579,6 @@ a {
   }
   
   .faq-container {
-    top: 10%;
     display: grid;
     grid-template-rows: 0.5fr 3fr;
     grid-template-columns: 1fr;
@@ -555,7 +592,7 @@ a {
     text-align: center;
     margin: 0;
     position: static;
-    margin-top: 10%;
+    margin-top: 0%;
   }
   
   .faq-text h1 {
@@ -566,7 +603,7 @@ a {
 
 footer {
   height: 12vh;
-  background-color: #021639;
+  background-color: hsl(198, 93%, 12%);
   color: #fff;
 }
 
@@ -578,4 +615,28 @@ footer {
   margin-right: 10rem;
   position: relative;
   top: 20%;
+}
+
+@media only screen and (max-width:600px){
+  footer {
+    height: 12vh;
+    background-color: #021639;
+    color: #fff;
+  }
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row: inherit;
+    margin-left: 5rem;
+    margin-right: 10rem;
+    position: relative;
+    top: 20%;
+  }
+
+  .footer-logo{
+    background-color: #5cb85f;
+    width: 4rem;
+    height: 2rem;
+  }
 }
