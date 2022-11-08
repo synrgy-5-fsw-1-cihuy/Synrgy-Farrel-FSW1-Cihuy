@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/cari_mobil.css" />
 
-    <!-- Roboto Font -->
+    <!--* Roboto Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,7 +17,7 @@
     />
     <!--  -->
 
-    <!-- Bootstrap -->
+    <!--* Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -70,22 +70,28 @@
           </div>
           <div class="hero-filter-nama">
             <label for="">Tanggal</label>
-            <input type="date" name="" id="">
+            <input type="date" name="" id="tanggal_filter">
           </div>
           <div class="hero-filter-nama">
             <label for="">Jam diambil</label>
-            <input type="time" name="" id="">
+            <input type="time" name="" id="jam_filter">
           </div>
           <div class="hero-filter-nama">
             <label for="">Jumlah penumpang (opsional)</label>
-            <input type="number" name="" id="">
+            <input type="number" name="" id="jumlah_filter">
           </div>
           <div class="hero-filter-nama">
-            <label style="color: #f0f2ff;" for="">_</label>
-            <button>Cari Mobil</button>
+            <label style="color: #f0f2ff;" for="" >_</label>
+            <button id="form_filter_submit">Cari Mobil</button>
           </div>
         </div>
+        <div class="hero-filter-show">
+          <button id="load-bt">load</button>
+          <button id="clear-btn">clear</button>
+          <div id="cars-container"></div>
+        </div>
       </div>
+
     </section>
 
 
@@ -104,6 +110,10 @@
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="./scripts/binar.js"></script>
+    <script type="text/javascript" src="./scripts/app.js"></script>
+    <script type="text/javascript" src="./scripts/car.js"></script>
+    <script type="text/javascript" src="./scripts/main.js"></script>
     <!--  -->
   </body>
 </html>

@@ -116,11 +116,11 @@ a {
 
 .hero-container {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 390px 780px;
   grid-row: inherit;
   /* margin-left: 10rem; */
   /* margin-right: 10rem; */
-  padding-left: 5rem;
+  padding-left: 15rem;
   position: absolute;
 }
 
@@ -149,23 +149,41 @@ a {
 .hero-filter-container {
   background-color: white;
   padding: 10px;
-  margin-top: 4rem;
+  margin-top: 3rem;
   margin-left: 5rem;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
   border-radius: 4px;
   box-shadow: #021639;
   display: flex;
   flex-direction: row;
   grid-column: 1 / span 2;
   gap: 1rem;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 .hero-filter-nama {
   display: flex;
   flex-direction: column;
   /* gap: 1rem; */
+}
+
+.hero-filter-show {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: inherit;
+  gap: 1rem;
+  place-content: center;
+  margin-top: 1rem;
+}
+
+#cars-container {
+  grid-column: 1 / span 2;
 }
 
 #hero input {
@@ -244,7 +262,7 @@ footer {
 
 @media only screen and (max-width: 600px) {
   footer {
-    height: 12vh;
+    /* height: 12vh; */
     background-color: #021639;
     color: #fff;
   }
