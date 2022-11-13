@@ -1,39 +1,25 @@
-# Binar: Challenge 04
+# Challenge 05 FSW Synrgy Farrel Abyansyah
 
-- Mulai modifikasi file `server/index.js` apabila ingin membuat HTTP server.
-- Mulai modifikasi folder `public` apabila ingin memodifikasi HTML.
+This is the repo for challenge 05 thata was assigned to all Synrgy participant including me, Farrel Abyansyah.
 
-# `Binar` class
+In this challenge, we were told to create a backend server using `Express.js` and create APIS based on REST standard that could handle a couple of request and spit out response accordingly.
 
-Class ini berisi 1 static method saja, yang berfungsi untuk mengambil data mobil dari internet.
+> This document was created for the sole purpose of documentation practice.
 
-```typescript
-interface Car {
-  id: string;
-  plate: string;
-  manufacture: string;
-  model: string;
-  image: string;
-  rentPerDay: number;
-  capacity: number;
-  description: string;
-  transmission: string;
-  available: boolean;
-  type: string;
-  year: string;
-  options: Array<string>;
-  specs: Array<string>;
-}
+## Step 1 : create a branch
 
-interface Binar {
-  listCars(filterer: (car: Car) => boolean): Array<Car>
-}
+```pwsh
+git switch -c challenge-05
 ```
 
-Method `listCars` ini akan menerima fungsi yang mana harus mengembalikan `boolean` sebagai nilainya. 
-Fungsi ini akan dijalankan untuk masing-masing item di dalam list of cars, yang mana jika nilainya `true`,
-maka akan ditampilkan di dalam list tersebut.
+## Step 2 : initialize NPM
 
-# Tips
+```pwsh
+npm init -y
+```
 
-Just, hack it bro!
+## Step 3 : Install necessary dependencies
+
+```pwsh
+npm install express
+```
