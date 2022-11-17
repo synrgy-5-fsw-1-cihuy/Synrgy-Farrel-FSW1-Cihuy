@@ -23,3 +23,5 @@ npm init -y
 ```pwsh
 npm install express cloudinary express-formidable sequelize pg pg-hstore
 ```
+
+For API documentation, refer to README.md inside `routes`file
