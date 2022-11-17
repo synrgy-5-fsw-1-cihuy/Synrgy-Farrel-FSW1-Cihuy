@@ -21,5 +21,5 @@ npm init -y
 ## Step 3 : Install necessary dependencies
 
 ```pwsh
-npm install express
+npm install express cloudinary express-formidable sequelize pg pg-hstore
 ```
