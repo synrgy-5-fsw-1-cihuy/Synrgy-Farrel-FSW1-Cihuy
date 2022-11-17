@@ -11,11 +11,11 @@ const Cars = db.define(
       primaryKey: true,
       unique: true,
     },
-    name: {
+    nama: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    price: {
+    biaya: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },

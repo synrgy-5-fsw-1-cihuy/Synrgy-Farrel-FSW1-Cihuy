@@ -20,7 +20,7 @@ router.put("/:id", (req, res, next) => {
       }
 
       console.warn(files.files.filepath);
-      console.log(fields.name);
+      console.log(fields.nama);
 
       cloudinary.uploader.upload(files.files.filepath, async (err, result) => {
         if (err) {
@@ -29,8 +29,8 @@ router.put("/:id", (req, res, next) => {
         }
         uploadedFiles = result.secure_url;
         console.log(result);
-        const price = Number(fields.price);
-        fields.price = price;
+        const biaya = Number(fields.biaya);
+        fields.biaya = biaya;
         fields.foto = result.secure_url;
         await Cars.update(fields, {
           where: {

@@ -18,7 +18,7 @@ router.post("/", (req, res, next) => {
       }
 
       console.log(files.files.filepath);
-      console.log(fields.name);
+      console.log(fields.nama);
 
       cloudinary.uploader.upload(files.files.filepath, async (err, result) => {
         if (err) {
@@ -27,8 +27,8 @@ router.post("/", (req, res, next) => {
         }
         uploadedFiles = result.secure_url;
         console.log(result);
-        const price = Number(fields.price);
-        fields.price = price;
+        const biaya = Number(fields.biaya);
+        fields.biaya = biaya;
         fields.foto = result.secure_url;
         await Cars.create(fields);
         res.status(200).json(fields);
