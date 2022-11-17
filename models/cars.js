@@ -3,7 +3,7 @@ const db = require("../config/database");
 const DataTypes = Sequelize;
 
 const Cars = db.define(
-  "cars_farrel",
+  "car_farrel",
   {
     id: {
       type: DataTypes.INTEGER,

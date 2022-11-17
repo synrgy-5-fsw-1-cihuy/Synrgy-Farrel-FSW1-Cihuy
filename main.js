@@ -6,7 +6,7 @@ const getDaftarMobil = require("./routes/getCarList");
 const postNewCar = require("./routes/postNewCar");
 const deleteCar = require("./routes/deleteCar");
 const updateCar = require("./routes/updateCar");
-const tes = require("./routes/tes");
+// const tes = require("./routes/tes");
 const db = require("./config/database");
 
 const { carSynchro } = require("./models/cars");
