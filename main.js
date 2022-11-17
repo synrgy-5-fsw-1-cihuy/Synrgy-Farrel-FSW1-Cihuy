@@ -30,7 +30,7 @@ app.use("/deleteCar", deleteCar);
 
 app.use("/updateCar", updateCar);
 
-app.use("/tes", tes);
+// app.use("/tes", tes);
 
 app.use((req, res) => {
   res.status(404).send("Not found");
