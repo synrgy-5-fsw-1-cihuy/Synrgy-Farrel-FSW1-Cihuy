@@ -44,6 +44,7 @@ Object.keys(db).forEach((modelName) => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-db.getAll = require("./user_login")(sequelize, Sequelize);
+db.user = require("./user_login")(sequelize, Sequelize);
+db.car = require("./cars")(sequelize, Sequelize);
 
 module.exports = db;

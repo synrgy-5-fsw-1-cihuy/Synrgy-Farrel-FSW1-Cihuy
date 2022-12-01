@@ -8,7 +8,16 @@ const {
   registerAdmin,
   registerUser,
   loginCheck,
+  tokenCheck,
 } = require("../controller/login_handler");
+
+const {
+  addCar,
+  deleteCar,
+  updateCar,
+  getAllCar,
+  getCarbyId,
+} = require("../controller/cars_handler");
 
 const encryptPassword = require("../middleware/encrypt");
 const auth = require("../middleware/auth");
@@ -24,6 +33,13 @@ router.get("/", getAdmin);
 router.post("/admin", auth, encryptPassword, registerAdmin);
 router.post("/user", auth, encryptPassword, registerUser);
 router.post("/login", loginCheck);
+router.get("/token", auth, tokenCheck);
+
+router.post("/cars/add", auth, addCar);
+router.put("/cars/update/:id", auth, updateCar);
+router.delete("/cars/delete/:id", auth, deleteCar);
+router.get("/cars/", getAllCar);
+router.get("/cars/:id", getCarbyId);
 
 router.get("/tes", auth, (req, res) => {
   const data = req.user;

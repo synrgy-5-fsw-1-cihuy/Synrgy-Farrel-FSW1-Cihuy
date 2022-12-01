@@ -1,5 +1,5 @@
 const model = require("../db/models/index");
-const User_login = model.getAll;
+const User_login = model.user;
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
@@ -103,12 +103,20 @@ const loginCheck = async (req, res) => {
         role: dbData.dataValues.role,
       },
       process.env.TOKEN_SECRET,
-      { expiresIn: "2m" }
+      { expiresIn: "1h" }
     );
     console.log(token);
     res.status(200).send("Logged in successfully 👍");
   } else {
     res.status(400).send("Invalid email or password ❌");
+  }
+};
+
+const tokenCheck = (req, res) => {
+  try {
+    res.status(200).json(req.user);
+  } catch (error) {
+    res.status(401).send(error);
   }
 };
 
@@ -118,4 +126,5 @@ module.exports = {
   registerUser,
   getAdmin,
   loginCheck,
+  tokenCheck,
 };
