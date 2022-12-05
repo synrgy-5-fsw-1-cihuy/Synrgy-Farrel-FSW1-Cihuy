@@ -40,7 +40,7 @@ const updateCar = async (req, res) => {
         },
       }
     );
-    res.status(202).send(`Data with id : ${req.params.id} has been updated`);
+    res.status(204).send(`Data with id : ${req.params.id} has been updated`);
   } catch (error) {
     res.status(500).send(error);
   }
