@@ -1,6 +1,8 @@
+import { Header } from "./components/Header/Header";
 import Cars from "./components/Cars/Cars";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { NavLink, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+// import logo from "./assets/logo.svg";
 
 const queryClient = new QueryClient();
 
@@ -8,23 +10,23 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <div id="header" className="py-4 bg-[#f1f3ff]">
-          <div className="flex flex-row gap-96">
-            <div id="logo" className="flex flex-row gap-4 mx-32">
-              <img src="https://i.imgur.com/1ZQZ1Zu.png" alt="logo" />
-              <h1 className="text-2xl font-bold">Rental Mobil BCR</h1>
-            </div>
-            <div
-              id="navbar"
-              className="flex flex-row gap-8 place-items-end ml-32"
-            >
-              <NavLink to={"/"}>Home</NavLink>
-              <NavLink to={"/Cari"}>Cari</NavLink>
-            </div>
-          </div>
-          <div id="isi">INI ISI</div>
-        </div>
-        <Cars />
+        <Header />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className="text-center mt-16">
+                <h1 className=" font-semibold text-4xl">
+                  Anggep aja ini Home Page 🙂
+                </h1>
+                <p className="text-xs">
+                  Sorry mas belom kelar slicing home page....
+                </p>
+              </div>
+            }
+          />
+          <Route path="/Cari" element={<Cars />} />
+        </Routes>
       </QueryClientProvider>
     </>
   );
