@@ -31,14 +31,14 @@ describe("POST /v1/auth/login", () => {
   });
 });
 
-describe("GET /v1/auth/whoami", () => {
-  it("respond 200", (done) => {
-    request(app)
-      .get("/v1/auth/whoami")
-      .set("Authorization", `Bearer ${dummyToken}`)
-      .expect("Content-Type", "application/json; charset=utf-8")
-      .expect(200, done);
-  }, 10000);
-});
+// describe("GET /v1/auth/whoami", () => {
+//   it("respond 200", (done) => {
+//     request(app)
+//       .get("/v1/auth/whoami")
+//       .set("Authorization", `Bearer ${dummyToken}`)
+//       .expect("Content-Type", "application/json; charset=utf-8")
+//       .expect(200, done);
+//   }, 10000);
+// });
 
 // describe("POST /v1/auth/register");
