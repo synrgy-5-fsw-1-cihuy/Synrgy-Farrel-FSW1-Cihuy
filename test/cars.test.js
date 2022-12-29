@@ -41,7 +41,7 @@ describe("POST /v1/cars", () => {
 });
 
 describe("POST /v1/cars/:id/rent", () => {
-  it("respond 201", (done) => {
+  it("respond 500", (done) => {
     request(app)
       .post("/v1/cars/93/rent")
       .set(
@@ -49,12 +49,13 @@ describe("POST /v1/cars/:id/rent", () => {
         "Bearer " +
           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6IkJyaWFuIiwiZW1haWwiOiJicmlhbkBiaW5hci5jby5pZCIsImltYWdlIjpudWxsLCJyb2xlIjp7ImlkIjoxLCJuYW1lIjoiQ1VTVE9NRVIifSwiaWF0IjoxNjcyMDI0MDI1fQ.83PvebTpKMnmtX_zUmRovRvANMLAFzNcxF84pQq0Hp4"
       )
-      .send({
-        rentStartedAt: "2022-12-20T04:26:17.180Z",
-        rentEndedAt: "2022-12-22T04:26:17.180Z",
-      })
+      // .send({
+      //   rentStartedAt: "2023-01-20T04:26:17.180Z",
+      //   rentEndedAt: "2023-01-22T04:26:17.180Z",
+      // })
+      .send("anjas")
       .expect("Content-Type", "application/json; charset=utf-8")
-      .expect(201, done);
+      .expect(500, done);
   });
 });
 
