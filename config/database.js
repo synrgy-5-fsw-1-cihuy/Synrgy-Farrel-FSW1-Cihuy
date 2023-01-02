@@ -2,7 +2,7 @@ const {
   DB_USER = "farrel",
   DB_PASSWORD = "123456789",
   DB_NAME = "celeng08",
-  DB_HOST = "127.0.0.1",
+  DB_HOST = "0.0.0.0",
   DB_PORT = "5432",
 } = process.env;
 
