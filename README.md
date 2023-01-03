@@ -1,9 +1,7 @@
-# BCR API
+# Celeng 08
 
-Di dalam repository ini terdapat implementasi API dari Binar Car Rental.
-Tugas kalian disini adalah:
-1. Fork repository
-2. Tulis unit test di dalam repository ini menggunakan `jest`.
-3. Coverage minimal 70%
+Celeng 08 ini udah di deploy mass
+https://synrgy-farrel-fsw1-cihuy-production.up.railway.app
 
-Good luck!
+### Tapi error :") 
+dan di build lognya ga keliatan apa apa jd gatau salah dmn
